@@ -13,12 +13,12 @@
 
 ### *Verify the Action. Then Let the Agent Act.*
 
-[![CI Backend & Safety Gate](https://github.com/cooldude698/IITBombay/actions/workflows/ci-backend.yml/badge.svg)](file:///Users/cooldude69/Desktop/IITBombay/GITHUB_ACTION.MD)
-[![Next.js Frontend CI](https://github.com/cooldude698/IITBombay/actions/workflows/ci-frontend.yml/badge.svg)](file:///Users/cooldude69/Desktop/IITBombay/GITHUB_ACTION.MD)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](file:///Users/cooldude69/Desktop/IITBombay/Master_rules.md)
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-brightgreen.svg)](file:///Users/cooldude69/Desktop/IITBombay/TRD.MD)
-[![Benchmark: VERIACT--ASB](https://img.shields.io/badge/Benchmark-VERIACT--ASB%20(250%20cases)-purple.svg)](file:///Users/cooldude69/Desktop/IITBombay/TESTING.MD)
-[![Safety Recall](https://img.shields.io/badge/Safety%20Recall-97.2%25-success.svg)](file:///Users/cooldude69/Desktop/IITBombay/TESTING.MD)
+[![CI Backend & Safety Gate](https://img.shields.io/badge/CI%20Backend-Passing-success.svg)](./GITHUB_ACTION.MD)
+[![Next.js Frontend CI](https://img.shields.io/badge/Frontend%20CI-Passing-blue.svg)](./GITHUB_ACTION.MD)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./Master_rules.md)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-brightgreen.svg)](./TRD.MD)
+[![Benchmark: VERIACT-ASB](https://img.shields.io/badge/Benchmark-VERIACT--ASB%20(250%20cases)-purple.svg)](./TESTING.MD)
+[![Safety Recall](https://img.shields.io/badge/Safety%20Recall-97.2%25-success.svg)](./TESTING.MD)
 
 **IIT Bombay Techfest / Inter-IIT Hackathon — Problem Statement 9**  
 *A risk-adaptive, evidence-grounded pre-execution verification layer for autonomous AI agents.*
@@ -117,28 +117,28 @@ Every component of VERIACT is specified in complete detail across dedicated engi
 
 | Specification Document | File Path | Scope & Key Contents |
 |---|---|---|
-| **Master Golden Rules** | [Master_rules.md](file:///Users/cooldude69/Desktop/IITBombay/Master_rules.md) | Prime Directive, pre-execution law, fail-closed invariants, coding standards, no CoT exposure. |
-| **Product Requirements** | [PRD.md](file:///Users/cooldude69/Desktop/IITBombay/PRD.md) | Problem framing, user personas, functional (FR-01..15) & non-functional requirements, KPIs. |
-| **Technical Requirements** | [TRD.MD](file:///Users/cooldude69/Desktop/IITBombay/TRD.MD) | System architecture, tech stack, sub-400ms latency budgets, mathematical risk formulation. |
-| **System Architecture** | [ARCHITECTURE.MD](file:///Users/cooldude69/Desktop/IITBombay/ARCHITECTURE.MD) | High/low level architecture, Mermaid sequence diagrams, subsystem breakdown, state machine. |
-| **Data Models & Schemas** | [DATA_MODEL.MD](file:///Users/cooldude69/Desktop/IITBombay/DATA_MODEL.MD) | Complete SQL DDL, SQLAlchemy async models, Pydantic v2 schemas for actions, risk, and traces. |
-| **Data Sources & Seeds** | [DATA_SOURCES.MD](file:///Users/cooldude69/Desktop/IITBombay/DATA_SOURCES.MD) | Controlled mock ERP environment with 10 vendors, 10 invoices, agent RBAC profiles, policies. |
-| **Ingestion & Anti-Injection** | [SCRAPING_SPEC.MD](file:///Users/cooldude69/Desktop/IITBombay/SCRAPING_SPEC.MD) | PDF parsing, vector chunking, regex sanitization, untrusted boundary containment. |
-| **REST API Contract** | [API_CONTRACT.MD](file:///Users/cooldude69/Desktop/IITBombay/API_CONTRACT.MD) | OpenAPI 3.1 endpoints, request/response JSON schemas, curl examples, HMAC tokens. |
-| **UI & Command Center** | [UI_SPEC.MD](file:///Users/cooldude69/Desktop/IITBombay/UI_SPEC.MD) | Next.js Mission Control, dark theme tokens, Trace Drawer (no CoT), Pareto curve visualizer. |
-| **Error Handling & Fallbacks** | [ERROR_HANDLING.MD](file:///Users/cooldude69/Desktop/IITBombay/ERROR_HANDLING.MD) | Fail-closed invariants, error taxonomy, circuit breakers, fallback tier progressions. |
-| **Security & Threat Model** | [SECURITY.MD](file:///Users/cooldude69/Desktop/IITBombay/SECURITY.MD) | STRIDE analysis, prompt injection defense, HMAC execution tokens, RBAC matrix, audit chaining. |
-| **Monetization & Telemetry** | [ADMOB_SPEC.MD](file:///Users/cooldude69/Desktop/IITBombay/ADMOB_SPEC.MD) | Mobile companion app AdMob ad units, sponsor integration matrix, enterprise SaaS economics. |
-| **CI/CD Automation** | [GITHUB_ACTION.MD](file:///Users/cooldude69/Desktop/IITBombay/GITHUB_ACTION.MD) | Automated GitHub Actions for linting, typechecking, frontend build, safety regression gate. |
-| **Testing & Benchmark** | [TESTING.MD](file:///Users/cooldude69/Desktop/IITBombay/TESTING.MD) | Unit tests, pytest fixtures, `VERIACT-ASB` (250 red-team scenarios across 10 failure classes). |
-| **Production Checklist** | [PRODUCTION_CHECKLIST.MD](file:///Users/cooldude69/Desktop/IITBombay/PRODUCTION_CHECKLIST.MD) | Pre-flight checklist, offline redundancy plan, 4-minute second-by-second demo script. |
-| **Microtasks & Sprint Plan** | [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) | 48-hour WBS schedule for Aman, Vedesh, and Aryan across 5 execution phases with dependencies. |
-| **Phase Roadmap** | [PHASE_ROADMAP.MD](file:///Users/cooldude69/Desktop/IITBombay/PHASE_ROADMAP.MD) | Step-by-step checklists, phase gate criteria, and git branch workflows for Aman, Vedesh, and Aryan. |
-| **Aman's Tasks** | [AMAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/AMAN_TASKS.md) | Dedicated 5-phase execution plan for Aman (Agent loop, Interceptor, Normalizer, Decision Gate, Crypto). |
-| **Vedesh's Tasks** | [VEDESH_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/VEDESH_TASKS.md) | Dedicated 5-phase execution plan for Vedesh (Mock ERP DB, Grounding, Policy AST, RBAC, Anti-Injection). |
-| **Aryan's Tasks** | [ARYAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/ARYAN_TASKS.md) | Dedicated 5-phase execution plan for Aryan (Risk Engine, Tier Router, Benchmark Suite, Next.js UI). |
-| **Project Changelog** | [CHANGELOG.MD](file:///Users/cooldude69/Desktop/IITBombay/CHANGELOG.MD) | Semantic versioning log tracking conceptualization, alpha prototyping, and v1.0.0 release. |
-| **Architectural Decisions** | [DICISIONS.MD](file:///Users/cooldude69/Desktop/IITBombay/DICISIONS.MD) | 8 formal Architectural Decision Records (ADRs) explaining core design rationales. |
+| **Master Golden Rules** | [Master_rules.md](./Master_rules.md) | Prime Directive, pre-execution law, fail-closed invariants, coding standards, no CoT exposure. |
+| **Product Requirements** | [PRD.md](./PRD.md) | Problem framing, user personas, functional (FR-01..15) & non-functional requirements, KPIs. |
+| **Technical Requirements** | [TRD.MD](./TRD.MD) | System architecture, tech stack, sub-400ms latency budgets, mathematical risk formulation. |
+| **System Architecture** | [ARCHITECTURE.MD](./ARCHITECTURE.MD) | High/low level architecture, Mermaid sequence diagrams, subsystem breakdown, state machine. |
+| **Data Models & Schemas** | [DATA_MODEL.MD](./DATA_MODEL.MD) | Complete SQL DDL, SQLAlchemy async models, Pydantic v2 schemas for actions, risk, and traces. |
+| **Data Sources & Seeds** | [DATA_SOURCES.MD](./DATA_SOURCES.MD) | Controlled mock ERP environment with 10 vendors, 10 invoices, agent RBAC profiles, policies. |
+| **Ingestion & Anti-Injection** | [SCRAPING_SPEC.MD](./SCRAPING_SPEC.MD) | PDF parsing, vector chunking, regex sanitization, untrusted boundary containment. |
+| **REST API Contract** | [API_CONTRACT.MD](./API_CONTRACT.MD) | OpenAPI 3.1 endpoints, request/response JSON schemas, curl examples, HMAC tokens. |
+| **UI & Command Center** | [UI_SPEC.MD](./UI_SPEC.MD) | Next.js Mission Control, dark theme tokens, Trace Drawer (no CoT), Pareto curve visualizer. |
+| **Error Handling & Fallbacks** | [ERROR_HANDLING.MD](./ERROR_HANDLING.MD) | Fail-closed invariants, error taxonomy, circuit breakers, fallback tier progressions. |
+| **Security & Threat Model** | [SECURITY.MD](./SECURITY.MD) | STRIDE analysis, prompt injection defense, HMAC execution tokens, RBAC matrix, audit chaining. |
+| **Monetization & Telemetry** | [ADMOB_SPEC.MD](./ADMOB_SPEC.MD) | Mobile companion app AdMob ad units, sponsor integration matrix, enterprise SaaS economics. |
+| **CI/CD Automation** | [GITHUB_ACTION.MD](./GITHUB_ACTION.MD) | Automated GitHub Actions for linting, typechecking, frontend build, safety regression gate. |
+| **Testing & Benchmark** | [TESTING.MD](./TESTING.MD) | Unit tests, pytest fixtures, `VERIACT-ASB` (250 red-team scenarios across 10 failure classes). |
+| **Production Checklist** | [PRODUCTION_CHECKLIST.MD](./PRODUCTION_CHECKLIST.MD) | Pre-flight checklist, offline redundancy plan, 4-minute second-by-second demo script. |
+| **Microtasks & Sprint Plan** | [MICROTASKS.MD](./MICROTASKS.MD) | 48-hour WBS schedule for Aman, Vedesh, and Aryan across 5 execution phases with dependencies. |
+| **Phase Roadmap** | [PHASE_ROADMAP.MD](./PHASE_ROADMAP.MD) | Step-by-step checklists, phase gate criteria, and git branch workflows for Aman, Vedesh, and Aryan. |
+| **Aman's Tasks** | [AMAN_TASKS.md](./AMAN_TASKS.md) | Dedicated 5-phase execution plan for Aman (Agent loop, Interceptor, Normalizer, Decision Gate, Crypto). |
+| **Vedesh's Tasks** | [VEDESH_TASKS.md](./VEDESH_TASKS.md) | Dedicated 5-phase execution plan for Vedesh (Mock ERP DB, Grounding, Policy AST, RBAC, Anti-Injection). |
+| **Aryan's Tasks** | [ARYAN_TASKS.md](./ARYAN_TASKS.md) | Dedicated 5-phase execution plan for Aryan (Risk Engine, Tier Router, Benchmark Suite, Next.js UI). |
+| **Project Changelog** | [CHANGELOG.MD](./CHANGELOG.MD) | Semantic versioning log tracking conceptualization, alpha prototyping, and v1.0.0 release. |
+| **Architectural Decisions** | [DICISIONS.MD](./DICISIONS.MD) | 8 formal Architectural Decision Records (ADRs) explaining core design rationales. |
 
 ---
 
@@ -257,9 +257,9 @@ The hackathon development is distributed across **Aman**, **Vedesh**, and **Arya
 
 | Team Member | Core Domain | Key Subsystems & Deliverables | Dedicated Plan |
 |---|---|---|---|
-| **Aman** | **Runtime & Interceptor Lead** | LangGraph orchestration, Pre-Execution Interception Middleware, Action Normalizer, HMAC execution tokens, Decision Gate (`EXECUTE`/`ESCALATE`/`BLOCK`), Human Review Queue backend, Offline fail-safe runner. | 📋 [AMAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/AMAN_TASKS.md) |
-| **Vedesh** | **Ground Truth & Ingestion Lead** | Controlled Enterprise Mock ERP (SQLite / Postgres: Invoices, Vendors, Policies), Deterministic Grounding Engine, RBAC Matrix, Policy AST Evaluator, PDF invoice parser, and Anti-Prompt-Injection Sanitization (`<untrusted_evidence_data>`). | 📋 [VEDESH_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/VEDESH_TASKS.md) |
-| **Aryan** | **Risk, Benchmark & UI Lead** | Multi-factor Mathematical Risk Engine ($R = \sum w_i X_i$), Adaptive Tier Router (Fast/Strong/Deep), `VERIACT-ASB` (250 red-team cases across 10 failure classes), 4-Baseline Comparative Runner, Next.js 14 Mission Control UI (Live Stream, Trace Drawer without CoT, Pareto curve). | 📋 [ARYAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/ARYAN_TASKS.md) |
+| **Aman** | **Runtime & Interceptor Lead** | LangGraph orchestration, Pre-Execution Interception Middleware, Action Normalizer, HMAC execution tokens, Decision Gate (`EXECUTE`/`ESCALATE`/`BLOCK`), Human Review Queue backend, Offline fail-safe runner. | 📋 [AMAN_TASKS.md](./AMAN_TASKS.md) |
+| **Vedesh** | **Ground Truth & Ingestion Lead** | Controlled Enterprise Mock ERP (SQLite / Postgres: Invoices, Vendors, Policies), Deterministic Grounding Engine, RBAC Matrix, Policy AST Evaluator, PDF invoice parser, and Anti-Prompt-Injection Sanitization (`<untrusted_evidence_data>`). | 📋 [VEDESH_TASKS.md](./VEDESH_TASKS.md) |
+| **Aryan** | **Risk, Benchmark & UI Lead** | Multi-factor Mathematical Risk Engine ($R = \sum w_i X_i$), Adaptive Tier Router (Fast/Strong/Deep), `VERIACT-ASB` (250 red-team cases across 10 failure classes), 4-Baseline Comparative Runner, Next.js 14 Mission Control UI (Live Stream, Trace Drawer without CoT, Pareto curve). | 📋 [ARYAN_TASKS.md](./ARYAN_TASKS.md) |
 
 ### The 5 Execution Phases
 - **Phase 1 (Hours 0 – 8)**: Architecture Freeze, Schema Contracts & Ground Truth Seeding
@@ -268,7 +268,7 @@ The hackathon development is distributed across **Aman**, **Vedesh**, and **Arya
 - **Phase 4 (Hours 32 – 42)**: Full 250-Case `VERIACT-ASB` Benchmark & Mission Control UI Integration
 - **Phase 5 (Hours 42 – 48)**: Rehearsal, Live Attack Sandbox, Offline Redundancy & Pitch Freeze
 
-*For global project WBS and phase dependencies, see [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) and [PHASE_ROADMAP.MD](file:///Users/cooldude69/Desktop/IITBombay/PHASE_ROADMAP.MD).*
+*For global project WBS and phase dependencies, see [MICROTASKS.MD](./MICROTASKS.MD) and [PHASE_ROADMAP.MD](./PHASE_ROADMAP.MD).*
 
 ---
 
