@@ -132,7 +132,8 @@ Every component of VERIACT is specified in complete detail across dedicated engi
 | **CI/CD Automation** | [GITHUB_ACTION.MD](file:///Users/cooldude69/Desktop/IITBombay/GITHUB_ACTION.MD) | Automated GitHub Actions for linting, typechecking, frontend build, safety regression gate. |
 | **Testing & Benchmark** | [TESTING.MD](file:///Users/cooldude69/Desktop/IITBombay/TESTING.MD) | Unit tests, pytest fixtures, `VERIACT-ASB` (250 red-team scenarios across 10 failure classes). |
 | **Production Checklist** | [PRODUCTION_CHECKLIST.MD](file:///Users/cooldude69/Desktop/IITBombay/PRODUCTION_CHECKLIST.MD) | Pre-flight checklist, offline redundancy plan, 4-minute second-by-second demo script. |
-| **Microtasks & Sprint Plan** | [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) | 48-hour WBS schedule across 5 team roles with task dependencies and acceptance criteria. |
+| **Microtasks & Sprint Plan** | [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) | 48-hour WBS schedule for Aman, Vedesh, and Aryan across 5 execution phases with dependencies. |
+| **Phase Roadmap** | [PHASE_ROADMAP.MD](file:///Users/cooldude69/Desktop/IITBombay/PHASE_ROADMAP.MD) | Step-by-step checklists, phase gate criteria, and git branch workflows for Aman, Vedesh, and Aryan. |
 | **Project Changelog** | [CHANGELOG.MD](file:///Users/cooldude69/Desktop/IITBombay/CHANGELOG.MD) | Semantic versioning log tracking conceptualization, alpha prototyping, and v1.0.0 release. |
 | **Architectural Decisions** | [DICISIONS.MD](file:///Users/cooldude69/Desktop/IITBombay/DICISIONS.MD) | 8 formal Architectural Decision Records (ADRs) explaining core design rationales. |
 
@@ -244,6 +245,27 @@ python -m benchmark.runner --size 250 --format markdown
 - **Slide 8: The Results (Pareto Frontier)**: $97.2\%$ safety recall matching Always-Deep, with $82\%$ lower latency and $80\%$ lower token costs.
 - **Slide 9: Live Demo Walkthrough**: Catching an agent proposing ₹25,000 on an approved ₹18,500 invoice, escalating policy thresholds, and neutralizing injection.
 - **Slide 10: Conclusion & Impact**: Making autonomous agents provably safe and enterprise-ready before they act.
+
+---
+
+## 9. Team Roles & 5-Phase Execution Plan
+
+The hackathon development is distributed across **Aman**, **Vedesh**, and **Aryan** over 5 structured sprint phases:
+
+| Team Member | Core Domain | Key Subsystems & Deliverables |
+|---|---|---|
+| **Aman** | **Runtime & Interceptor Lead** | LangGraph orchestration, Pre-Execution Interception Middleware, Action Normalizer, HMAC execution tokens, Decision Gate (`EXECUTE`/`ESCALATE`/`BLOCK`), Human Review Queue backend, Offline fail-safe runner. |
+| **Vedesh** | **Ground Truth & Ingestion Lead** | Controlled Enterprise Mock ERP (SQLite / Postgres: Invoices, Vendors, Policies), Deterministic Grounding Engine, RBAC Matrix, Policy AST Evaluator, PDF invoice parser, and Anti-Prompt-Injection Sanitization (`<untrusted_evidence_data>`). |
+| **Aryan** | **Risk, Benchmark & UI Lead** | Multi-factor Mathematical Risk Engine ($R = \sum w_i X_i$), Adaptive Tier Router (Fast/Strong/Deep), `VERIACT-ASB` (250 red-team cases across 10 failure classes), 4-Baseline Comparative Runner, Next.js 14 Mission Control UI (Live Stream, Trace Drawer without CoT, Pareto curve). |
+
+### The 5 Execution Phases
+- **Phase 1 (Hours 0 – 8)**: Architecture Freeze, Schema Contracts & Ground Truth Seeding
+- **Phase 2 (Hours 8 – 20)**: Core Verification Engines & Pre-Execution Interception Middleware
+- **Phase 3 (Hours 20 – 32)**: Risk-Adaptive Tiering, Tri-State Decision Gate & Baselines
+- **Phase 4 (Hours 32 – 42)**: Full 250-Case `VERIACT-ASB` Benchmark & Mission Control UI Integration
+- **Phase 5 (Hours 42 – 48)**: Rehearsal, Live Attack Sandbox, Offline Redundancy & Pitch Freeze
+
+*See [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) for the complete task breakdown, dependencies, and verification criteria.*
 
 ---
 
