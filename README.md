@@ -134,6 +134,9 @@ Every component of VERIACT is specified in complete detail across dedicated engi
 | **Production Checklist** | [PRODUCTION_CHECKLIST.MD](file:///Users/cooldude69/Desktop/IITBombay/PRODUCTION_CHECKLIST.MD) | Pre-flight checklist, offline redundancy plan, 4-minute second-by-second demo script. |
 | **Microtasks & Sprint Plan** | [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) | 48-hour WBS schedule for Aman, Vedesh, and Aryan across 5 execution phases with dependencies. |
 | **Phase Roadmap** | [PHASE_ROADMAP.MD](file:///Users/cooldude69/Desktop/IITBombay/PHASE_ROADMAP.MD) | Step-by-step checklists, phase gate criteria, and git branch workflows for Aman, Vedesh, and Aryan. |
+| **Aman's Tasks** | [AMAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/AMAN_TASKS.md) | Dedicated 5-phase execution plan for Aman (Agent loop, Interceptor, Normalizer, Decision Gate, Crypto). |
+| **Vedesh's Tasks** | [VEDESH_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/VEDESH_TASKS.md) | Dedicated 5-phase execution plan for Vedesh (Mock ERP DB, Grounding, Policy AST, RBAC, Anti-Injection). |
+| **Aryan's Tasks** | [ARYAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/ARYAN_TASKS.md) | Dedicated 5-phase execution plan for Aryan (Risk Engine, Tier Router, Benchmark Suite, Next.js UI). |
 | **Project Changelog** | [CHANGELOG.MD](file:///Users/cooldude69/Desktop/IITBombay/CHANGELOG.MD) | Semantic versioning log tracking conceptualization, alpha prototyping, and v1.0.0 release. |
 | **Architectural Decisions** | [DICISIONS.MD](file:///Users/cooldude69/Desktop/IITBombay/DICISIONS.MD) | 8 formal Architectural Decision Records (ADRs) explaining core design rationales. |
 
@@ -252,11 +255,11 @@ python -m benchmark.runner --size 250 --format markdown
 
 The hackathon development is distributed across **Aman**, **Vedesh**, and **Aryan** over 5 structured sprint phases:
 
-| Team Member | Core Domain | Key Subsystems & Deliverables |
-|---|---|---|
-| **Aman** | **Runtime & Interceptor Lead** | LangGraph orchestration, Pre-Execution Interception Middleware, Action Normalizer, HMAC execution tokens, Decision Gate (`EXECUTE`/`ESCALATE`/`BLOCK`), Human Review Queue backend, Offline fail-safe runner. |
-| **Vedesh** | **Ground Truth & Ingestion Lead** | Controlled Enterprise Mock ERP (SQLite / Postgres: Invoices, Vendors, Policies), Deterministic Grounding Engine, RBAC Matrix, Policy AST Evaluator, PDF invoice parser, and Anti-Prompt-Injection Sanitization (`<untrusted_evidence_data>`). |
-| **Aryan** | **Risk, Benchmark & UI Lead** | Multi-factor Mathematical Risk Engine ($R = \sum w_i X_i$), Adaptive Tier Router (Fast/Strong/Deep), `VERIACT-ASB` (250 red-team cases across 10 failure classes), 4-Baseline Comparative Runner, Next.js 14 Mission Control UI (Live Stream, Trace Drawer without CoT, Pareto curve). |
+| Team Member | Core Domain | Key Subsystems & Deliverables | Dedicated Plan |
+|---|---|---|---|
+| **Aman** | **Runtime & Interceptor Lead** | LangGraph orchestration, Pre-Execution Interception Middleware, Action Normalizer, HMAC execution tokens, Decision Gate (`EXECUTE`/`ESCALATE`/`BLOCK`), Human Review Queue backend, Offline fail-safe runner. | 📋 [AMAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/AMAN_TASKS.md) |
+| **Vedesh** | **Ground Truth & Ingestion Lead** | Controlled Enterprise Mock ERP (SQLite / Postgres: Invoices, Vendors, Policies), Deterministic Grounding Engine, RBAC Matrix, Policy AST Evaluator, PDF invoice parser, and Anti-Prompt-Injection Sanitization (`<untrusted_evidence_data>`). | 📋 [VEDESH_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/VEDESH_TASKS.md) |
+| **Aryan** | **Risk, Benchmark & UI Lead** | Multi-factor Mathematical Risk Engine ($R = \sum w_i X_i$), Adaptive Tier Router (Fast/Strong/Deep), `VERIACT-ASB` (250 red-team cases across 10 failure classes), 4-Baseline Comparative Runner, Next.js 14 Mission Control UI (Live Stream, Trace Drawer without CoT, Pareto curve). | 📋 [ARYAN_TASKS.md](file:///Users/cooldude69/Desktop/IITBombay/ARYAN_TASKS.md) |
 
 ### The 5 Execution Phases
 - **Phase 1 (Hours 0 – 8)**: Architecture Freeze, Schema Contracts & Ground Truth Seeding
@@ -265,7 +268,7 @@ The hackathon development is distributed across **Aman**, **Vedesh**, and **Arya
 - **Phase 4 (Hours 32 – 42)**: Full 250-Case `VERIACT-ASB` Benchmark & Mission Control UI Integration
 - **Phase 5 (Hours 42 – 48)**: Rehearsal, Live Attack Sandbox, Offline Redundancy & Pitch Freeze
 
-*See [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) for the complete task breakdown, dependencies, and verification criteria.*
+*For global project WBS and phase dependencies, see [MICROTASKS.MD](file:///Users/cooldude69/Desktop/IITBombay/MICROTASKS.MD) and [PHASE_ROADMAP.MD](file:///Users/cooldude69/Desktop/IITBombay/PHASE_ROADMAP.MD).*
 
 ---
 
