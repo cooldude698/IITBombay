@@ -121,6 +121,7 @@ Every component of VERIACT is specified in complete detail across dedicated engi
 | **Product Requirements** | [PRD.md](./PRD.md) | Problem framing, user personas, functional (FR-01..15) & non-functional requirements, KPIs. |
 | **Technical Requirements** | [TRD.MD](./TRD.MD) | System architecture, tech stack, sub-400ms latency budgets, mathematical risk formulation. |
 | **System Architecture** | [ARCHITECTURE.MD](./ARCHITECTURE.MD) | High/low level architecture, Mermaid sequence diagrams, subsystem breakdown, state machine. |
+| **End-to-End Workflow Diagram** | [WORKFLOW_FLOW_DIAGRAM.md](./WORKFLOW_FLOW_DIAGRAM.md) | Complete 8-stage visual workflow from User/Input to Feedback/Storage with flowcharts and sequence flows. |
 | **Data Models & Schemas** | [DATA_MODEL.MD](./DATA_MODEL.MD) | Complete SQL DDL, SQLAlchemy async models, Pydantic v2 schemas for actions, risk, and traces. |
 | **Data Sources & Seeds** | [DATA_SOURCES.MD](./DATA_SOURCES.MD) | Controlled mock ERP environment with 10 vendors, 10 invoices, agent RBAC profiles, policies. |
 | **Ingestion & Anti-Injection** | [SCRAPING_SPEC.MD](./SCRAPING_SPEC.MD) | PDF parsing, vector chunking, regex sanitization, untrusted boundary containment. |
