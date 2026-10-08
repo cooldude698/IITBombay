@@ -57,3 +57,4 @@ yarn-error.log*
 # Local SQLite databases
 *.sqlite
 *.sqlite3
+*.db

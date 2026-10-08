@@ -30,8 +30,8 @@ class DeterministicGroundingEngine:
                 raw_inv = ground_truth_repo.get_invoice(str(inv_id))
                 if raw_inv:
                     evidence_record = GroundTruthEvidence(
-                        evidence_id=f"evi_{raw_inv['invoice_id']}",
-                        entity_key=raw_inv["invoice_id"],
+                        evidence_id=f"evi_{raw_inv.get('invoice_id', raw_inv.get('id'))}",
+                        entity_key=raw_inv.get("invoice_id", raw_inv.get("id")),
                         data=raw_inv,
                         confidence_score=1.0
                     )
@@ -47,9 +47,9 @@ class DeterministicGroundingEngine:
 
         # 3. Financial Actions Grounding
         if action.action_type == ActionType.FINANCIAL:
-            inv_id = action.parameters.get("invoice")
+            inv_id = action.parameters.get("invoice") or action.parameters.get("invoice_id")
             proposed_amount = action.parameters.get("amount")
-            proposed_vendor = action.parameters.get("vendor")
+            proposed_vendor = action.parameters.get("vendor") or action.parameters.get("vendor_name")
 
             if not inv_id:
                 violations.append("MISSING_EVIDENCE: Financial transfer requires valid invoice reference.")
@@ -69,8 +69,8 @@ class DeterministicGroundingEngine:
                 return None, mismatches, violations, contradiction_score, False
 
             evidence_record = GroundTruthEvidence(
-                evidence_id=f"evi_{raw_inv['invoice_id']}",
-                entity_key=raw_inv["invoice_id"],
+                evidence_id=f"evi_{raw_inv.get('invoice_id', raw_inv.get('id'))}",
+                entity_key=raw_inv.get("invoice_id", raw_inv.get("id")),
                 data=raw_inv,
                 confidence_score=1.0
             )
@@ -88,7 +88,7 @@ class DeterministicGroundingEngine:
 
             # Compare Amounts
             if proposed_amount is not None:
-                approved_amount = raw_inv["approved_amount"]
+                approved_amount = raw_inv.get("approved_amount", raw_inv.get("amount"))
                 delta = abs(float(proposed_amount) - approved_amount)
                 if delta > 0.01:
                     diff_sign = "+" if float(proposed_amount) > approved_amount else "-"
@@ -97,7 +97,7 @@ class DeterministicGroundingEngine:
                         proposed_value=proposed_amount,
                         evidence_value=approved_amount,
                         severity="CRITICAL",
-                        message=f"Amount mismatch: Proposed amount ₹{proposed_amount:,.2f} contradicts approved invoice amount ₹{approved_amount:,.2f} ({diff_sign}₹{delta:,.2f})."
+                        message=f"Amount mismatch: Proposed amount INR {proposed_amount:,.2f} contradicts approved invoice amount INR {approved_amount:,.2f} ({diff_sign}INR {delta:,.2f})."
                     ))
                     contradiction_score = 1.0
 
@@ -118,7 +118,7 @@ class DeterministicGroundingEngine:
             if proposed_amount and float(proposed_amount) > 10000.0:
                 if contradiction_score == 0.0:  # If everything else matches
                     requires_escalation = True
-                    violations.append(f"POLICY_ALERT (POL-FIN-001): Payment of ₹{proposed_amount:,.2f} exceeds autonomous cap of ₹10,000.00. Manager signoff required.")
+                    violations.append(f"POLICY_ALERT (POL-FIN-001): Payment of INR {proposed_amount:,.2f} exceeds autonomous cap of INR 10,000.00. Manager signoff required.")
 
         return evidence_record, mismatches, violations, contradiction_score, requires_escalation
 
