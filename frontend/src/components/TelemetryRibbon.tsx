@@ -45,7 +45,7 @@ export const TelemetryRibbon: React.FC<TelemetryRibbonProps> = ({ stats }) => {
               <Activity className="w-3.5 h-3.5 text-[#226192]" />
             </div>
             <div className="flex items-baseline space-x-2 mt-1">
-              <span className="text-lg font-bold font-code text-[#EAE6DE]">
+              <span suppressHydrationWarning className="text-lg font-bold font-code text-[#EAE6DE]">
                 {total.toLocaleString()}
               </span>
               <span className="text-[10px] font-medium text-emerald-400 bg-emerald-950/60 px-1 rounded">
@@ -61,7 +61,7 @@ export const TelemetryRibbon: React.FC<TelemetryRibbonProps> = ({ stats }) => {
               <Zap className="w-3.5 h-3.5 text-emerald-400" />
             </div>
             <div className="flex items-baseline space-x-2 mt-1">
-              <span className="text-lg font-bold font-code text-emerald-400">
+              <span suppressHydrationWarning className="text-lg font-bold font-code text-emerald-400">
                 {stats.verified_executed.toLocaleString()}
               </span>
               <span className="text-[10px] font-medium text-emerald-400/90 font-code">
@@ -77,7 +77,7 @@ export const TelemetryRibbon: React.FC<TelemetryRibbonProps> = ({ stats }) => {
               <AlertTriangle className="w-3.5 h-3.5 text-[#EF8557]" />
             </div>
             <div className="flex items-baseline space-x-2 mt-1">
-              <span className="text-lg font-bold font-code text-[#EF8557]">
+              <span suppressHydrationWarning className="text-lg font-bold font-code text-[#EF8557]">
                 {stats.escalated.toLocaleString()}
               </span>
               <span className="text-[10px] font-medium text-[#EF8557]/90 font-code">
@@ -93,7 +93,7 @@ export const TelemetryRibbon: React.FC<TelemetryRibbonProps> = ({ stats }) => {
               <XOctagon className="w-3.5 h-3.5 text-rose-400" />
             </div>
             <div className="flex items-baseline space-x-2 mt-1">
-              <span className="text-lg font-bold font-code text-rose-400">
+              <span suppressHydrationWarning className="text-lg font-bold font-code text-rose-400">
                 {stats.blocked.toLocaleString()}
               </span>
               <span className="text-[10px] font-medium text-rose-400/90 font-code">

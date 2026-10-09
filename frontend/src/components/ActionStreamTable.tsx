@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ActionTrace, Verdict, VerificationTier } from "@/types";
 import {
   Search,
@@ -28,9 +28,31 @@ export const ActionStreamTable: React.FC<ActionStreamTableProps> = ({
   onSelectTrace,
   onTriggerDemo,
 }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [filterVerdict, setFilterVerdict] = useState<string>("ALL");
   const [filterTier, setFilterTier] = useState<string>("ALL");
   const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const formatTimestamp = (timestamp: string) => {
+    if (!mounted) return "--:--:--";
+    try {
+      const d = new Date(timestamp);
+      return isNaN(d.getTime())
+        ? timestamp
+        : d.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+          });
+    } catch {
+      return timestamp;
+    }
+  };
 
   const filteredTraces = traces.filter((t) => {
     const matchesVerdict = filterVerdict === "ALL" || t.verdict === filterVerdict;
@@ -234,11 +256,7 @@ export const ActionStreamTable: React.FC<ActionStreamTableProps> = ({
             ) : (
               filteredTraces.map((trace) => {
                 const isSelected = selectedTrace?.trace_id === trace.trace_id;
-                const formattedTime = new Date(trace.timestamp).toLocaleTimeString([], {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  second: "2-digit",
-                });
+                const formattedTime = formatTimestamp(trace.timestamp);
 
                 return (
                   <tr
@@ -251,7 +269,10 @@ export const ActionStreamTable: React.FC<ActionStreamTableProps> = ({
                     }`}
                   >
                     {/* Timestamp */}
-                    <td className="py-4 px-5 font-code text-xs text-slate-400 whitespace-nowrap">
+                    <td
+                      suppressHydrationWarning
+                      className="py-4 px-5 font-code text-xs text-slate-400 whitespace-nowrap"
+                    >
                       {formattedTime}
                     </td>
 

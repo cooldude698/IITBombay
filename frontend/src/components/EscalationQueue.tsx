@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { EscalationItem } from "@/types";
 import { submitEscalationDecision } from "@/lib/api";
 import {
@@ -19,6 +19,11 @@ interface EscalationQueueProps {
 }
 
 export const EscalationQueue: React.FC<EscalationQueueProps> = ({ items, onRefresh }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [submittingId, setSubmittingId] = useState<string | null>(null);
   const [resolvedToken, setResolvedToken] = useState<string | null>(null);
 
@@ -114,9 +119,9 @@ export const EscalationQueue: React.FC<EscalationQueueProps> = ({ items, onRefre
                 </div>
 
                 <div className="flex items-center space-x-2">
-                  <span className="text-xs font-mono text-slate-400 flex items-center">
+                  <span suppressHydrationWarning className="text-xs font-mono text-slate-400 flex items-center">
                     <Clock className="w-3.5 h-3.5 mr-1" />
-                    {new Date(item.created_at).toLocaleTimeString()}
+                    {mounted ? new Date(item.created_at).toLocaleTimeString() : "--:--:--"}
                   </span>
                   <span className="px-2 py-0.5 rounded text-xs font-bold font-mono bg-[#EF8557]/20 text-[#EF8557] border border-[#EF8557]/40">
                     Risk: {item.risk_score.toFixed(2)}

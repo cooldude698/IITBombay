@@ -98,7 +98,7 @@ export const GroundTruthModal: React.FC<GroundTruthModalProps> = ({ isOpen, onCl
                       <td className="py-2.5 px-3 text-slate-300">
                         {inv.vendor_name || inv.vendor_id}
                       </td>
-                      <td className="py-2.5 px-3 text-right font-bold text-emerald-400">
+                      <td suppressHydrationWarning className="py-2.5 px-3 text-right font-bold text-emerald-400">
                         INR {(inv.amount || inv.approved_amount || 0).toLocaleString()}
                       </td>
                       <td className="py-2.5 px-3">

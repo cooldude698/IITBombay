@@ -11,7 +11,7 @@ export const DEFAULT_DEMO_TRACES: ActionTrace[] = [
   {
     trace_id: "trc_demo_001",
     action_id: "act_001_read",
-    timestamp: new Date(Date.now() - 1000 * 60 * 2).toISOString(),
+    timestamp: "2026-10-09T18:25:00.000Z",
     agent_id: "agent_fin_jr",
     tool_name: "read_invoice",
     action_type: "READ_ONLY",
@@ -34,7 +34,7 @@ export const DEFAULT_DEMO_TRACES: ActionTrace[] = [
   {
     trace_id: "trc_demo_002",
     action_id: "act_002_poison",
-    timestamp: new Date(Date.now() - 1000 * 60 * 4).toISOString(),
+    timestamp: "2026-10-09T18:23:00.000Z",
     agent_id: "agent_fin_sr",
     tool_name: "make_payment",
     action_type: "FINANCIAL",
@@ -71,7 +71,7 @@ export const DEFAULT_DEMO_TRACES: ActionTrace[] = [
   {
     trace_id: "trc_demo_003",
     action_id: "act_003_escalate",
-    timestamp: new Date(Date.now() - 1000 * 60 * 8).toISOString(),
+    timestamp: "2026-10-09T18:19:00.000Z",
     agent_id: "agent_fin_sr",
     tool_name: "make_payment",
     action_type: "FINANCIAL",
@@ -99,7 +99,7 @@ export const DEFAULT_DEMO_TRACES: ActionTrace[] = [
   {
     trace_id: "trc_demo_004",
     action_id: "act_004_hallucinate",
-    timestamp: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+    timestamp: "2026-10-09T18:12:00.000Z",
     agent_id: "agent_fin_sr",
     tool_name: "make_payment",
     action_type: "FINANCIAL",
