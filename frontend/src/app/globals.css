@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #EAE6DE;
+  --color-blue: #226192;
+  --color-orange: #EF8557;
+  --bg-main: #0B131B;
+  --bg-card: #121E2B;
+}
+
+body {
+  background-color: #0B131B;
+  color: #EAE6DE;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B131B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #226192;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EF8557;
+}
+
+/* Glassmorphism & Card Glows */
+.brand-card {
+  background-color: #121E2B;
+  border: 1px solid rgba(34, 97, 146, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(11, 19, 27, 0.7);
+}
+
+.brand-card-hover:hover {
+  border-color: #226192;
+  box-shadow: 0 8px 30px -4px rgba(34, 97, 146, 0.25);
+}
+
+.brand-glow-orange {
+  box-shadow: 0 0 15px rgba(239, 133, 87, 0.3);
+}
+
+.brand-glow-blue {
+  box-shadow: 0 0 15px rgba(34, 97, 146, 0.35);
+}
