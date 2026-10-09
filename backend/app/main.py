@@ -11,6 +11,7 @@ from app.api.v1.traces import router as traces_router
 from app.api.v1.analytics import router as analytics_router
 from app.api.v1.sandbox import router as sandbox_router
 from app.api.v1.ground_truth import router as ground_truth_router
+from app.api.v1.benchmark import router as benchmark_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -36,6 +37,7 @@ app.include_router(traces_router, prefix=settings.API_V1_STR, tags=["Audit Trace
 app.include_router(analytics_router, prefix=settings.API_V1_STR, tags=["Analytics & Telemetry"])
 app.include_router(sandbox_router, prefix=settings.API_V1_STR, tags=["Attack Sandbox"])
 app.include_router(ground_truth_router, prefix=settings.API_V1_STR, tags=["Ground Truth"])
+app.include_router(benchmark_router, prefix=settings.API_V1_STR, tags=["Benchmark & Pareto"])
 
 @app.get("/", tags=["Health"])
 async def root():

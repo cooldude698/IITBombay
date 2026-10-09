@@ -79,21 +79,7 @@ class ParameterMismatch(BaseModel):
 # ==============================================================================
 # RISK ENGINE SCHEMAS
 # ==============================================================================
-
-class RiskBreakdown(BaseModel):
-    financial_impact: float = Field(default=0.0, ge=0.0, le=1.0, description="F: Value exposure")
-    irreversibility: float = Field(default=0.0, ge=0.0, le=1.0, description="I: Action write/delete nature")
-    permission_risk: float = Field(default=0.0, ge=0.0, le=1.0, description="P: RBAC elevation needed")
-    evidence_uncertainty: float = Field(default=0.0, ge=0.0, le=1.0, description="U: Missing or weak evidence")
-    contradiction_severity: float = Field(default=0.0, ge=0.0, le=1.0, description="C: Direct mismatches")
-    total_risk_score: float = Field(default=0.0, ge=0.0, le=1.0, description="R: Weighted composite score")
-
-class RiskWeights(BaseModel):
-    w_financial: float = 0.25
-    w_irreversibility: float = 0.20
-    w_permission: float = 0.20
-    w_uncertainty: float = 0.15
-    w_contradiction: float = 0.20
+from app.models.risk import RiskBreakdown, RiskWeights
 
 # ==============================================================================
 # VERIFICATION RESULT & ACTION TRACE
