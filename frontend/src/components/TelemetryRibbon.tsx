@@ -123,7 +123,7 @@ export const TelemetryRibbon: React.FC<TelemetryRibbonProps> = ({ stats }) => {
           <div className="h-7 w-[1px] bg-[#226192]/40 hidden sm:block" />
 
           {/* Tier routing breakdown indicator */}
-          <div className="flex flex-col text-[10px] font-code hidden sm:flex">
+          <div className="hidden sm:flex flex-col text-[10px] font-code">
             <span className="text-slate-400 flex items-center space-x-1">
               <Layers className="w-3 h-3 text-[#226192]" />
               <span>Tier Distribution</span>
